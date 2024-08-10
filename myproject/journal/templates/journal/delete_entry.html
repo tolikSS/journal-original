@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Entry</title>
+</head>
+<body>
+    <h1>Delete Entry</h1>
+    <p>Are you sure you want to delete "{{ entry }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="{% url 'index' %}">Cancel</a>
+</body>
+</html>
